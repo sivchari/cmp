@@ -1,0 +1,16 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "items": [
+    {
+      "id": 1,
+      "title": "Item One",
+      "description": "This is the first item."
+    },
+    {
+      "id": 2,
+      "title": "Item Two",
+      "description": "This is the second item."
+    }
+  ]
+}
