@@ -78,7 +78,9 @@ func TestDiff(t *testing.T) {
 	for name, tc := range cases {
 		t.Run(name, func(t *testing.T) {
 			t.Parallel()
-			cmp.Diff(t, testdata, tc.fileName, tc.want)
+			if diff := cmp.Diff(t, testdata, tc.fileName, tc.want); diff != "" {
+				t.Errorf("mismatch (-want +got):\n%s", diff)
+			}
 		})
 	}
 }
